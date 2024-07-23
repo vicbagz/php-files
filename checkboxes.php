@@ -22,14 +22,21 @@
 
 <?php
     if(isset($_POST["submit"])){
-
-        $foods = $_POST["foods"];
-
+        
+        /*
         foreach($foods as $food){
             echo $food . "<br>";
         }
-        /*
-        if(isset($_POST["pizza"])){
+        */
+
+        if(isset($_POST["foods"])){
+            $foods = $_POST["foods"]; 
+            foreach($foods as $food){
+                echo "You like {$food}<br>";
+            } 
+        }
+
+        /*if(isset($_POST["pizza"])){
             echo"You like pizza!<br>";
         }
         if(isset($_POST["hamburger"])){
@@ -40,7 +47,7 @@
         }
         if(isset($_POST["taco"])){
             echo"You like taco!<br>";
-        }                        
+        }                            
         if(empty($_POST["pizza"])){
             echo"You DON'T like pizza!<br>";
         }
@@ -55,4 +62,5 @@
         }   
         */
     }
+
 ?>
